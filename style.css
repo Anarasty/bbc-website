@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -40,6 +40,7 @@ nav {
 }
 
 nav .logo {
+    font-family: 'Staatliches', cursive;
     font-size: 7vmin;
     margin: 20px;
     letter-spacing: 8px;
@@ -55,6 +56,7 @@ nav .logo::before {
 }
 
 nav .logo span {
+    font-family: 'Staatliches', cursive;
     color: var(--light-brown);
 }
 
@@ -70,7 +72,6 @@ nav .nav-links ul li {
 
 nav .nav-links ul li a {
     color: var(--white);
-    font-family: 'Poppins', sans-serif;
     font-weight: 900;
 }
 
@@ -91,10 +92,9 @@ nav .nav-links ul li a:hover::after{
 
 /* SLIDER */
 .slider-menu {
-    background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url(assets/bg2.jpg);
-    background-position: bottom;
+    background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url(assets/bg1.jpg);
     background-size: cover;
-    animation: scroll 70s linear infinite;
+    animation: scroll 100s linear infinite;
 }
 
 
@@ -131,9 +131,9 @@ nav .nav-links ul li a:hover::after{
     position: absolute;
     /* top: 60%; */
     /* left: 2%; */
-    margin: 10px 40px;
-    font-size: 5vmin;
-    letter-spacing: 5px;
+    margin: 0px 40px;
+    font-size: 4vmin;
+    letter-spacing: 3px;
     border: 5px solid var(--white);
     padding: 10px 30px;
     border-radius: 30px;
