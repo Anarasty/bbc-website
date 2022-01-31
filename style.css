@@ -28,7 +28,13 @@ ul {
     list-style: none;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
+
 /* NAVIGATION STYLING */
+
 nav {
     width: 100%;
     display: flex;
@@ -37,6 +43,11 @@ nav {
     /* background: rgb(97, 97, 97); */
     z-index: 2;
     position: fixed;
+    transition: 1s ease;
+}
+
+ .sticky {
+    background-color: black;
 }
 
 nav .logo {
@@ -116,12 +127,12 @@ nav .nav-links ul li a:hover::after{
 /* Картинка масштабируется по отношению к родительскому элементу */
 .slider .item img {
     position: relative;
-    top: 150px;
-    left: 0;
+    top: 19vh;
+    left: 0; 
     object-fit: cover;
     width: 100%;
     height: 600px;
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 0px 0px 40px black;
     filter: brightness(0.7);
 }
@@ -185,3 +196,56 @@ nav .nav-links ul li a:hover::after{
         filter: blur(0px);
     }
 }
+
+
+.about {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.about h1 {
+    font-size: 7vmin;
+    margin: 80px auto;
+    font-weight: 900;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .row .col {
+    width: 50%;
+    transition: 1s ease;
+}
+
+.about .row .col p {
+    font-size: 3vmin;
+    margin: 40px;
+    padding: 10px;
+    background-color: rgba(255, 235, 205, 0.5);
+    border-radius: 10px;
+    transition: 1s ease;
+}
+
+.about .row .col p:hover {
+    background-color: rgba(255, 235, 205, 1);
+    box-shadow: 0px 0px 10px black;
+}
+
+.about .row .imgcol img{
+    transition: 1s ease;
+    width: 80%;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: -10px -5px 20px rgba(0, 0, 0, 0.3), 10px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about .row .imgcol img:hover {
+    transform: scale(1.05);
+}
+
