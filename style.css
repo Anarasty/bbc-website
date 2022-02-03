@@ -41,11 +41,23 @@ nav {
 }
 
  .sticky {
-    background-color: black;
+    background-color: var(--white);
 }
 
  .sticky .logo {
      padding: 20px;
+     font-size: 6vmin;
+     letter-spacing: 3px;
+     color: var(--black);
+     text-shadow: 0px 0px 0px;
+ }
+
+ .sticky .logo span {
+    color: var(--brown);
+ }
+
+ .sticky .nav-links ul li a {
+    color: var(--black);
  }
 
 nav .logo {
@@ -296,7 +308,8 @@ nav .menu-icon {
 .line {
     width: 90%;
     margin: 100px auto;
-    border-top: 5px solid black;
+    border-top: 10px solid var(--brown);
+    border-radius: 5px;
 }
 
 .pugs {
@@ -379,4 +392,42 @@ nav .menu-icon {
 
 .pugs .col .link a:hover {
     color: var(--light-brown);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 90px auto;
+}
+
+.location .location-content {
+    margin: 40px auto;
+}
+
+.location .location-content h1 {
+    font-size: 4vmin;
+    color: var(--black);
+    margin: 50px auto;
+}
+
+.location .location-content h3 {
+    font-size: 3vmin;
+    margin: 10px auto;
+    color: var(--black);
+} 
+
+.location .location-content h3 i {
+    margin: 10px;
+}
+
+.location .map {
+    margin: 40px auto;
+}
+
+.location .map iframe {
+    border: 4px solid var(--brown);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
 }
