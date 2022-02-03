@@ -100,6 +100,11 @@ nav .nav-links ul li a::after{
 nav .nav-links ul li a:hover::after{
     width: 100%;
 }
+nav .menu-icon {
+    color: var(--white);
+    font-size: 5vmin;
+    display: none;
+}
 
 
 /* SLIDER */
@@ -111,6 +116,9 @@ nav .nav-links ul li a:hover::after{
 
 
 @keyframes scroll {
+    0%{
+        background-position:0px 3000px;
+    }
    100%{
     background-position:0px -3000px;
   }
@@ -213,22 +221,39 @@ nav .nav-links ul li a:hover::after{
     margin: 80px auto;
     font-weight: 900;
     color: var(--black);
-    
-
+    animation-name: animText1;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     /* TEXT ANIMATION */
-    background: linear-gradient(to right, #000000 0, var(--light-brown) 10%, #000000 20%);
+    /* background: linear-gradient(to right, #000000 0, var(--light-brown) 10%, #000000 20%);
     background-position: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s infinite linear;
     animation-fill-mode: forwards;
-    -webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: none; */
 }
 
-@keyframes shine{
+@keyframes animText1 {
+    0%{text-shadow: 0px 0px 0px black;}
+    10%{text-shadow: 0px 0px 20px black;}
+    20%{text-shadow: 0px 0px 30px black;}
+    30%{text-shadow: 0px 0px 40px black;}
+    40%{text-shadow: 0px 0px 50px black;}
+    50%{text-shadow: 0px 0px 60px black;}
+    60%{text-shadow: 0px 0px 50px black;}
+    70%{text-shadow: 0px 0px 40px black;}
+    80%{text-shadow: 0px 0px 30px black;}
+    90%{text-shadow: 0px 0px 20px black;}
+    100%{text-shadow: 0px 0px 0px black;}
+
+}
+
+/* @keyframes shine{
   0%{background-position: 0;}
   100%{background-position: 285px;}
-}
+} */
 
 
 .about .row {
@@ -267,3 +292,91 @@ nav .nav-links ul li a:hover::after{
     transform: scale(1.05);
 }
 
+
+.line {
+    width: 90%;
+    margin: 100px auto;
+    border-top: 5px solid black;
+}
+
+.pugs {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    flex-direction: column;
+    background-image: url(assets/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pugs .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.pugs .row .col {
+    width: 30%;
+    backdrop-filter: blur(5px);
+    border: 5px solid var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5),
+    -10px -10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pugs .row .col .imgBox{
+    display: flex;
+}
+
+.pugs .row .col .imgBox img {
+    margin: 0px auto;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.pugs .title h1{
+    font-size: 7vmin;
+    margin: 40px auto;
+    color: var(--white);
+}
+
+.pugs .col h3{
+    margin: 10px auto;
+    color: var(--white);
+    text-align: center;
+    font-size: 3vmin;
+}
+
+.pugs .col p {
+    color: var(--white);
+    text-align: justify;
+    margin: 20px auto;
+    font-size: 2.5vmin;
+}
+
+.pugs .col .link {
+    width: 50%;
+    text-align: center;
+    margin: 40px auto;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    transition: all 1s;  
+}
+
+.pugs .col .link a {
+    color: var(--white); 
+    font-size: 3vmin; 
+    transition: all 1s;  
+}
+
+.pugs .col .link:hover {
+    background-color: var(--brown);
+    border-color: var(--light-brown);
+}
+
+.pugs .col .link a:hover {
+    color: var(--light-brown);
+}
