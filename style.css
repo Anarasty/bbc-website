@@ -10,6 +10,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root {
@@ -18,14 +20,6 @@
     --black: rgb(0,0,0);
     --brown: brown;
     --light-brown: rgb(255, 165, 64);
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
 }
 
 body, html {
@@ -43,20 +37,26 @@ nav {
     /* background: rgb(97, 97, 97); */
     z-index: 2;
     position: fixed;
-    transition: 1s ease;
+    transition: all 0.5s ease;
 }
 
  .sticky {
     background-color: black;
 }
 
+ .sticky .logo {
+     padding: 20px;
+ }
+
 nav .logo {
     font-family: 'Staatliches', cursive;
     font-size: 7vmin;
-    margin: 20px;
+    /* margin: 20px; */
+    padding: 40px;
     letter-spacing: 8px;
     color: var(--white);
     text-shadow: 1px 0 1px var(--white), 0 1px 1px var(--white), -1px 0 1px var(--white), 0 -1px 1px var(--white);
+    transition: all 0.5s ease;
 }
 
 nav .logo::before {
@@ -78,7 +78,8 @@ nav .nav-links ul {
 
 nav .nav-links ul li {
     font-size: 3vmin;
-    margin: 20px;
+    /* margin: 20px; */
+    padding: 20px;
 }
 
 nav .nav-links ul li a {
@@ -211,7 +212,24 @@ nav .nav-links ul li a:hover::after{
     font-size: 7vmin;
     margin: 80px auto;
     font-weight: 900;
+    color: var(--black);
+    
+
+    /* TEXT ANIMATION */
+    background: linear-gradient(to right, #000000 0, var(--light-brown) 10%, #000000 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
 }
+
+@keyframes shine{
+  0%{background-position: 0;}
+  100%{background-position: 285px;}
+}
+
 
 .about .row {
     display: flex;
@@ -234,7 +252,7 @@ nav .nav-links ul li a:hover::after{
 
 .about .row .col p:hover {
     background-color: rgba(255, 235, 205, 1);
-    box-shadow: 0px 0px 10px black;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .about .row .imgcol img{
