@@ -446,8 +446,90 @@ nav .menu-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 0px 10px black;
 }
 
 .contact h2 {
     font-size: 6vmin;
+    margin: 50px auto;
+}
+
+.contact label {
+    font-size: 3vmin;
+    font-weight: 900;
+}
+
+.contact input {
+    font-size: 3vmin;
+    border: 3px solid var(--black);
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.contact textarea {
+    border: 3px solid var(--black);
+    font-size: 3vmin;
+    resize: none;
+    padding: 10px;
+    font-weight: 900;
+}
+
+.contact input[type=submit] {
+    margin: 30px;   
+    transition: all 0.5s ease;
+    border-color: var(--black);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.contact input[type=submit]:hover {
+    background-color: var(--brown);
+    color: var(--light-brown);
+    border-color: var(--light-brown);
+    box-shadow: 0px 0px 10px var(--black);
+}
+
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(250, 239, 215);
+}
+
+footer div {
+    margin: 40px;
+}
+
+footer h3 { 
+    font-size: 4vmin;
+}
+
+footer h2 {
+    font-size: 2.5vmin;
+    line-height: 45px;
+}
+
+footer .social {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .social img {
+    width: 40%;
+    margin: 5px auto;
+    transition: all 0.5s ease;
+}
+
+footer .social img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+footer .sponsores ul, li{
+    font-size: 3.5vmin;
+    line-height: 50px;
 }
