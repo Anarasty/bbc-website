@@ -71,12 +71,12 @@ nav .logo {
     transition: all 0.5s ease;
 }
 
-nav .logo::before {
+/* nav .logo::before {
     content: url(assets/logo3.png);
     position: relative;
     top: 8px;
     margin: 0px 10px;
-}
+} */
 
 nav .logo span {
     font-family: 'Staatliches', cursive;
@@ -203,7 +203,7 @@ nav .menu-icon {
 /* Анимация слайдов */
 .slider .item {
     animation-name: fade;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: linear;
     /* animation-iteration-count: infinite; */
 }
@@ -424,6 +424,12 @@ nav .menu-icon {
 
 .location .map {
     margin: 40px auto;
+    
+}
+
+.location .map iframe {
+    width: 600px;
+    height: 450px;
 }
 
 .location .map iframe {
@@ -502,6 +508,7 @@ footer {
 
 footer div {
     margin: 40px;
+    width: 30%;
 }
 
 footer h3 { 
@@ -518,8 +525,12 @@ footer .social {
     flex-direction: column;
 }
 
+footer .social h3{
+    text-align: center;
+}
+
 footer .social img {
-    width: 40%;
+    width: 15%;
     margin: 5px auto;
     transition: all 0.5s ease;
 }
@@ -532,4 +543,94 @@ footer .social img:hover {
 footer .sponsores ul, li{
     font-size: 3.5vmin;
     line-height: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+    nav .logo {
+        padding: 20px;
+        letter-spacing: 3px;
+    }
+    nav .nav-links ul li {
+        padding: 10px;
+    }
+
+    .slider {
+        height: 120vh;
+    }
+    
+    .slider .item h3 {
+        margin: 0px 20px;
+        font-size: 3.5vmin;
+        border: 3px solid var(--white);
+        padding: 5px 20px;
+    }
+
+
+    .about h1 {
+        margin: 10px auto;
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .row .col {
+        width: 100%;
+    }
+
+    .about .row .col p {
+        margin: 20px auto;
+        font-weight: 600;
+    }
+
+    .about .row .imgcol img {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .pugs .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pugs .row .col {
+        width:80%;
+    }
+
+    .location {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .location .map iframe{
+        width: 500px;
+    }
+
+    footer .social img {
+        width: 30%;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 666px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .location .map iframe{
+        width: 300px;
+    }
+
+    footer div {
+        margin: 20px;
+        width: 30%;
+    }
+
+    footer .social img {
+        width: 60%;
+    }
 }
